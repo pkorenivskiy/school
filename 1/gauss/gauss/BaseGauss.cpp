@@ -49,6 +49,8 @@ namespace PAKO
 
 	const bool CBaseGauss::calc()
 	{
+		//https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%B0
+		//https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%B0_%E2%80%94_%D0%96%D0%BE%D1%80%D0%B4%D0%B0%D0%BD%D0%B0
 		// forward run
 		double dblVal = .0;
 		for (auto i = 1; i < m_Matrix.size(); ++i)
