@@ -28,8 +28,11 @@ namespace PAKO
 		virtual const bool validate() const;
 		virtual const bool calc();
 
+	private:
+		const size_t findNonZCol(size_t n) const;
+
 	protected:		
-		TMatrix m_Matrix;
+		TMatrix m_Matrix;		
 		TRow m_FreeMember;
 	};
 

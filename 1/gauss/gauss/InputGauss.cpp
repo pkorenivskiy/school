@@ -20,7 +20,7 @@ namespace PAKO
 		int nSize = 0;
 		while (nSize < 2 || nSize > 100)
 		{
-			printf("\n¬введ≥ть розм≥рн≥сть матриц≥: ");
+			printf("\n¬введiть розмiрнiсть матрицi: ");
 			cin >> nSize;
 		}
 
@@ -36,10 +36,10 @@ namespace PAKO
 		{
 			for (auto j = 0; j < nSize; ++j)
 			{
-				printf("¬вед≥ть елемент {%d, %d} :", i, j);
+				printf("¬ведiть елемент {%d, %d} :", i, j);
 				cin >> m_Matrix[i][j];
 			}
-			printf("¬вед≥ть в≥льний член %d :", i);
+			printf("¬ведiть вiльний член %d :", i);
 			cin >> m_FreeMember[i];
 		}
 

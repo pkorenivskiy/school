@@ -15,9 +15,9 @@ using namespace PAKO;
 
 int main(int argc, wchar_t* argv[])
 {
-	//setlocale(LC_ALL, "uk-UA");
+	setlocale(LC_ALL, "uk-UA");
 
-	printf("Програма обчислення системи лінійних рівнянь\n");
+	printf("Програма обчислення системи лiнiйних рiвнянь\n");
 
 	do 
 	{
@@ -25,7 +25,7 @@ int main(int argc, wchar_t* argv[])
 
 		do 
 		{
-			printf("Оберіть спосіб введення даних:\n\t1 - клавіатура\n\t2 - файл\n\t0 - Вихід\n==>");
+			printf("Оберiть спосiб введення даних:\n\t1 - клавiатура\n\t2 - файл\n\t0 - Вихiд\n==>");
 			const auto ch = getch();
 
 			if (ch == '1')
@@ -57,11 +57,11 @@ int main(int argc, wchar_t* argv[])
 		}
 		else
 		{
-			printf("Вхідні дані не коректні\n\n");
+			printf("Вхiднi данi не коректнi\n\n");
 			continue;
 		}
 
-		printf("Натисніть Enter для наступного обчислення, або іншу клавішу для завершення\n");
+		printf("Натиснiть Enter для наступного обчислення, або iншу клавiшу для завершення\n");
 		
 	} while (getch() == 13);
 	

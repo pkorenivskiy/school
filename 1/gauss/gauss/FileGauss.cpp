@@ -21,7 +21,7 @@ namespace PAKO
 
 	const bool PAKO::CFileGauss::InputData()
 	{
-		FILE* fIn = fopen("c:\\data.dat", "r");
+		FILE* fIn = fopen("data.dat", "r");
 
 		if (fIn == nullptr)
 			return false;
@@ -39,7 +39,6 @@ namespace PAKO
 		int nRow = 0;
 		while (getline(sData, st))
 		{
-			//m_Matrix.push_back({ 0, 0 });
 			stringstream sRow(st);
 
 			string val;
@@ -51,13 +50,13 @@ namespace PAKO
 			{
 				stringstream sVal(val);				
 				sVal >> dblVal;
-				//m_Matrix[nRow].push_back(dblVal);
 				row.push_back(dblVal);
 			}
 			m_FreeMember.push_back(dblVal);
 			row.erase(row.end() - 1);
-			//m_Matrix[nRow].erase(m_Matrix[nRow].end() - 1);
 			m_Matrix.push_back(row);
 		}
+
+		fclose(fIn);
 	}
 }
