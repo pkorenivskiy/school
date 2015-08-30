@@ -26,7 +26,7 @@ int main(int argc, wchar_t* argv[])
 		do 
 		{
 			printf("Оберiть спосiб введення даних:\n\t1 - клавiатура\n\t2 - файл\n\t0 - Вихiд\n==>");
-			const auto ch = getch();
+			const auto ch = _getch();
 
 			if (ch == '1')
 				pGaus = shared_ptr<CBaseGauss>(new CInputGauss());
@@ -51,7 +51,7 @@ int main(int argc, wchar_t* argv[])
 			pGaus->ShowResult();
 
 			printf("Зберегти результат у файл?(y/n)");
-			if (getch() == 'y')
+			if (_getch() == 'y')
 				pGaus->SaveResult();
 			printf("\n");
 		}
@@ -63,7 +63,7 @@ int main(int argc, wchar_t* argv[])
 
 		printf("Натиснiть Enter для наступного обчислення, або iншу клавiшу для завершення\n");
 		
-	} while (getch() == 13);
+	} while (_getch() == 13);
 	
 	return 0;
 }

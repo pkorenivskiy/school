@@ -18,11 +18,11 @@ namespace PAKO
 		virtual ~CBaseGauss();
 
 	public:
-		void ShowInData();
-		void ShowResult();
-		void SaveResult();
+		void ShowInData() const;
+		void ShowResult() const;
+		void SaveResult() const;
 		virtual const bool InputData() abstract;
-		virtual const bool Calc() { return calc(); }
+		const bool Calc() { return calc(); }
 	
 	protected:
 		virtual const bool validate() const;

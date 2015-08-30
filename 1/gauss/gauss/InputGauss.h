@@ -7,7 +7,7 @@ using namespace std;
 namespace PAKO
 {
 
-	class CInputGauss : public CBaseGauss
+	class CInputGauss final : public CBaseGauss
 	{
 	public:
 		CInputGauss();

@@ -21,9 +21,9 @@ namespace PAKO
 
 	const bool PAKO::CFileGauss::InputData()
 	{
-		FILE* fIn = fopen("data.dat", "r");
+		FILE* fIn;
 
-		if (fIn == nullptr)
+		if (fopen_s(&fIn, "data.dat", "r") != 0)
 			return false;
 
 		char pBuf[255] = { 0 };
@@ -58,5 +58,7 @@ namespace PAKO
 		}
 
 		fclose(fIn);
+		
+		return true;
 	}
 }

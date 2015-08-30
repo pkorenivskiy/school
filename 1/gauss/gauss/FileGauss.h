@@ -5,7 +5,7 @@ using namespace std;
 
 namespace PAKO
 {
-	class CFileGauss : public CBaseGauss
+	class CFileGauss final : public CBaseGauss
 	{
 	public:
 		CFileGauss();
