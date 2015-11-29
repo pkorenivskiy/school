@@ -43,10 +43,24 @@ int main()
 
 	CMusicComposition* pMusics = new CMusicComposition[10];
 
-	for (size_t i = 0; i < 10; i++)
+	for (int i = 0; i < 10; ++i)
 	{
-		CMusicComposition comp(*musicLibrary[i]);
-		pMusics[i] = comp;
+		char lpszOpus[50];
+		sprintf_s(lpszOpus, 50, "sonata # %d", i);
+		pMusics[i].SetOpus(lpszOpus);
+		pMusics[i].SetDuration(i * 1024);
+		pMusics[i].SetDate(2010 + i, 1 + i, (1 + i) * 2);
+
+		pMusics[i].SetSymphony("simphony");
+		pMusics[i].SetConcert("Concert");
+		pMusics[i].SetSonata("Sonata");
+		pMusics[i].SetDivertissement("Divertissement");
+
+		CPerson composer;
+		composer.SetDate(1976 + i, 1 + i, (1 + i) * 5);
+		composer.SetName("First", "Last");
+
+		pMusics[i].SetComposer(composer);
 	}
 	
 	char lpszFileName[260];
@@ -60,6 +74,8 @@ int main()
 		fwrite(pIt++, 1, sizeof(pMusics[i]), f);
 	}	
 	fclose(f);
+
+	delete[] pMusics;
 
     return 0;
 }
